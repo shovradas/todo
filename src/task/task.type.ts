@@ -9,9 +9,14 @@ export interface Task{
     title: string,
     notes?: string,
     displayOrder: number,
-    dueAt: string,
+    dueAt?: string,
     status: string
 }
 
 export interface TaskDto{
+    title?: string,
+    notes?: string,
+    displayOrder?: number,
+    dueAt?: string,
+    status?: string
 }
