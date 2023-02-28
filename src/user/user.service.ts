@@ -43,3 +43,9 @@ export async function deleteUser(id: string): Promise<void>{
     console.log(sql)
     await executeQuery(sql, [id])
 }
+
+export async function getFullName(firstName: string, lastName: string): Promise<string>{
+    if(!firstName) return lastName
+    if(!lastName) return firstName
+    return `${firstName} ${lastName}`
+}
